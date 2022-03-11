@@ -1,0 +1,49 @@
+@media only screen and (min-width: 945px) and (max-width: 1400px) {
+    .posicion-boton {
+        margin-top: -18% !important;
+    }
+
+    .text-btn {
+        font-size: 9px !important;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .posicion-boton {
+        margin-top: -22% !important;
+    }
+
+    .text-btn {
+        font-size: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .posicion-boton {
+        margin-top: -25% !important;
+    }
+
+    .text-btn {
+        font-size: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .posicion-boton {
+        margin-top: -36% !important;
+    }
+
+    .text-btn {
+        font-size: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    .posicion-boton {
+        margin-top: -60% !important;
+    }
+
+    .text-btn {
+        font-size: 8px !important;
+    }
+}

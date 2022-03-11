@@ -391,3 +391,18 @@ body{
 	bottom:0;
 	width:100%;
 }
+
+.botonaccion {
+	background: yellow;
+	border-radius: 15px;
+	border: none;
+}
+
+a .text-btn {
+	text-decoration: none;
+	color: black;
+}
+
+a .text-btn :hover {
+	color: black;
+}

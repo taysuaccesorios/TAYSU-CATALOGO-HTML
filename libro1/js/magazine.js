@@ -292,17 +292,25 @@ function numberOfViews(book) {
 // Current view in a flipbook
 
 function getViewNumber(book, page) {
+	$('#pañoletaN').hide();
+	$('#sacosTutu').hide();
+	$('#camascome').hide();
 	return parseInt((page || book.turn('page'))/2 + 1, 10);
 }
 
 function moveBar(yes) {
+	$('#pañoletaN').hide();
+	$('#sacosTutu').hide();
+	$('#camascome').hide();
 	if (Modernizr && Modernizr.csstransforms) {
 		$('#slider .ui-slider-handle').css({zIndex: yes ? -1 : 10000});
 	}
 }
 
 function setPreview(view) {
-
+	$('#pañoletaN').hide();
+	$('#sacosTutu').hide();
+	$('#camascome').hide();
 	var previewWidth = 112,
 		previewHeight = 73,
 		previewSrc = 'pages/preview.jpg',
@@ -364,6 +372,10 @@ function decodeParams(data) {
 // Calculate the width and height of a square within another square
 
 function calculateBound(d) {
+
+	$('#pañoletaN').hide();
+	$('#sacosTutu').hide();
+	$('#camascome').hide();
 	
 	var bound = {width: d.width, height: d.height};
 
