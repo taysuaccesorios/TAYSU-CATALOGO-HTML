@@ -393,7 +393,7 @@ body{
 }
 
 .botonaccion {
-	background: yellow;
+	background: #FFDE59;
 	border-radius: 15px;
 	border: none;
 }
@@ -405,4 +405,8 @@ a .text-btn {
 
 a .text-btn :hover {
 	color: black;
+}
+
+.bg-yellowTS {
+	background: #FFDE59;
 }

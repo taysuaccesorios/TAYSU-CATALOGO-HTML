@@ -81,33 +81,49 @@
 	</div>
 
 	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="sacosTutu" class="posicion-boton">
-		<button style="cursor: pointer; width: 100%;" class="botonaccion"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20quiero%20preguntar%20por%20un%20saquito%20para%20mi%20peludito?" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por saquitos</p></a></button>
-		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20quiero%20preguntar%20por%20un%20tutu%20para%20mi%20princesa?" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Tutus</p></a></button>
+		<button style="cursor: pointer; width: 100%;" class="botonaccion" onclick="crearModal(3);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por saquitos</p></button>
+		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left" onclick="crearModal(4);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Tutus</p></button>
 	</div>
 
 	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="camascome" class="posicion-boton">
-		<button style="cursor: pointer; width: 100%;" class="botonaccion"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20quiero%20preguntar%20por%20camas%20para%20mi%20peludo?" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por camas</p></a></button>
-		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20como%20son%20los%20comedores%20en%20madera,%20me%20podr%C3%ADas%20dar%20una%20cotizaci%C3%B3n?" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Comedores</p></a></button>
+		<button style="cursor: pointer; width: 100%;" class="botonaccion" onclick="crearModal(5);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por camas</p></button>
+		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left" onclick="crearModal(6);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Comedores</p></button>
+	</div>
+
+	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="arnescorba" class="posicion-boton">
+		<button style="cursor: pointer; width: 100%;" class="botonaccion" onclick="crearModal(7);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Arneses</p></button>
+		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left" onclick="crearModal(8);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por Corbatines</p></button>
+	</div>
+
+	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="redeshanmade" class="posicion-boton">
+		<button style="cursor: pointer; width: 100%;" class="botonaccion" onclick="crearModal(9);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por collares</p></button>
+		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left" onclick="crearModal(10);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Unirse a la <br> TAYSU FAMILIA</p></button>
 	</div>
 </div>
 
 <div class="modal fade" id="modalpersonalizado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" style="width: 100%;" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLongTitle">TAYSU ACCESORIOS</h5>
+		<div class="modal-header bg-yellowTS">
+			<div class="d-flex">
+				<img src="../assets/img/TAYSU LOGO REGISTRADO.png" width="25%" class="m-auto">
+			</div>
+		  <!-- <h5 class="modal-title" id="exampleModalLongTitle">TAYSU ACCESORIOS</h5> -->
 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
 		<div class="modal-body">
-		  <h2>Elegir talla de tu peludito</h2>
+		  <h2 class="text-normal">Elegir talla de tu peludito</h2>
+		  <h2 class="text-comedores d-none">Medida para tu comedor</h2>
+		  <h2 class="text-seguir d-none">Bienvenido a la TAYSU Familia</h2>
 		  <div class="col-md-12 row">
-			<div class="col-md-6">
-				<img src="../assets/img/dog_and_cat_pattern-11.jpg" width="100%">
+			<div class="col-md-7">
+				<img width="100%" id="img-modal">
 			</div>
-			<div class="col-md-6">
-				<h1>TALLA</h1>
+			<div class="col-md-5 div-normal m-auto">
+				<div class="col-md-12 ml-3">
+					<h1 >TALLA</h1>
 				<form name="formul">
 					<select name="talla" id="talla">
 						<option value="" disabled selected>Elija la talla adecuada...</option>
@@ -117,15 +133,24 @@
 						<option value="4">Talla L</option> 
 					 </select>
 				</form>
+				</div>
 				
+			</div>
+
+			<div class="col-md-4 div-comedores d-none m-auto">
+				<h1>MEDIDAS</h1>
+				<form name="formul-com">
+					
+				</form>
 			</div>
 		  </div>
 		  
 		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-pañoleta" style="background-color: green;" onclick="getElement(cambioBoton);"><p class="text-white">ir a whatsapp</p></button>
-		  
+		<div class="modal-footer bg-yellowTS">
+			<div class="m-auto">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal"><p class="m-auto">Close</p></button>
+		  <button type="button" class="btn" style="background-color: #00bb2d;" onclick="getElement(cambioBoton);"><p class="text-white m-auto">ir a whatsapp</p></button>
+			</div>
 		</div>
 	  </div>
 	</div>
@@ -144,6 +169,7 @@ var link1 = "https://api.whatsapp.com/send?phone=573054025529&"
     talla = selectedOption.text;
 	
   });
+  
 
 function getElement(num) {
 
@@ -158,19 +184,97 @@ function getElement(num) {
 	
 	var link2 = "text=hola%20Camila,%20quiero%20una%20pa%C3%B1oleta%20personalizada%20"+talla+"%20para%20mi%20peludito"
 	var link3 = link1+link2;
-	window.open(link3, '_blank');}
+	window.open(link3, '_blank');
 
-}
+    } else if (num == 3) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20saquitos%20"+talla+"%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 4) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20tutus%20"+talla+"%20para%20mi%20princesa?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 5) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20camitas%20"+talla+"%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 6) {
+	
+	var link2 = "text=hola%20Camila,%20como%20son%20los%20comedores%20en%20madera,%20me%20podr%C3%ADas%20dar%20una%20cotizaci%C3%B3n?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 7) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20Arneses%20"+talla+"%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 8) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20corbatines%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 9) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20preguntar%20por%20collares%20"+talla+"%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    }
+
+} 
 
 function crearModal(num) {
 	$('#modalpersonalizado').modal("show");
+	$('.text-normal').removeClass('d-none'); $('.div-normal').removeClass('d-none');
+	$('.text-comedores').addClass('d-none'); $('.div-comedores').addClass('d-none');
 	
 	if (num == 1) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
 		cambioBoton = 1;
-		
 
 	} else if (num == 2) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
 		cambioBoton = 2;
+
+	} else if (num == 3) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 3;
+
+	} else if (num == 4) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 4;
+
+	} else if (num == 5) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 5;
+
+	} else if (num == 6) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		$('.text-normal').addClass('d-none'); $('.div-normal').addClass('d-none');
+	    $('.text-comedores').removeClass('d-none'); $('.div-comedores').removeClass('d-none');
+		cambioBoton = 6;
+
+	} else if (num == 7) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 7;
+
+	} else if (num == 8) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 8;
+
+	} else if (num == 9) {
+		$('#img-modal').attr('src', '../assets/img/img' +  num + '.png');
+		cambioBoton = 9;
+
 	}
 }
 
@@ -221,7 +325,7 @@ function loadApp() {
 
 			// The number of pages
 
-			pages: 12,
+			pages: 14,
 
 			// Events
 
@@ -268,16 +372,35 @@ function loadApp() {
 						$('#pañoletaN').show();
 						$('#sacosTutu').hide();
 						$('#camascome').hide();
+						$('#arnescorba').hide();
+						$('#redeshanmade').hide();
 					} else if (page==6 || page == 7) {
 
 						$('#sacosTutu').show();
 						$('#pañoletaN').hide();
 						$('#camascome').hide();
+						$('#arnescorba').hide();
+						$('#redeshanmade').hide();
 					} else if (page==8 || page == 9) {
 						$('#camascome').show();
                         $('#pañoletaN').hide();
                         $('#sacosTutu').hide();
-}
+						$('#arnescorba').hide();
+						$('#redeshanmade').hide();
+					} else if (page==10 || page == 11) {
+						$('#arnescorba').show();
+                        $('#pañoletaN').hide();
+						$('#camascome').hide();
+                        $('#sacosTutu').hide();
+						$('#redeshanmade').hide();
+					} else if (page==12 || page == 13) {
+						$('#redeshanmade').show();
+                        $('#pañoletaN').hide();
+						$('#camascome').hide();
+                        $('#sacosTutu').hide();
+						$('#arnescorba').hide();
+						
+					}
 				},
 
 				missing: function (event, pages) {

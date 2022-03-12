@@ -295,6 +295,8 @@ function getViewNumber(book, page) {
 	$('#pañoletaN').hide();
 	$('#sacosTutu').hide();
 	$('#camascome').hide();
+	$('#arnescorba').hide();
+	$('#redeshanmade').hide();
 	return parseInt((page || book.turn('page'))/2 + 1, 10);
 }
 
@@ -302,6 +304,8 @@ function moveBar(yes) {
 	$('#pañoletaN').hide();
 	$('#sacosTutu').hide();
 	$('#camascome').hide();
+	$('#arnescorba').hide();
+	$('#redeshanmade').hide();
 	if (Modernizr && Modernizr.csstransforms) {
 		$('#slider .ui-slider-handle').css({zIndex: yes ? -1 : 10000});
 	}
@@ -311,6 +315,8 @@ function setPreview(view) {
 	$('#pañoletaN').hide();
 	$('#sacosTutu').hide();
 	$('#camascome').hide();
+	$('#arnescorba').hide();
+	$('#redeshanmade').hide();
 	var previewWidth = 112,
 		previewHeight = 73,
 		previewSrc = 'pages/preview.jpg',
@@ -376,6 +382,9 @@ function calculateBound(d) {
 	$('#pañoletaN').hide();
 	$('#sacosTutu').hide();
 	$('#camascome').hide();
+	$('#arnescorba').hide();
+	$('#redeshanmade').hide();
+	
 	
 	var bound = {width: d.width, height: d.height};
 
