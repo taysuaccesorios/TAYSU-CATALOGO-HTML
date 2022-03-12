@@ -76,8 +76,8 @@
 	</div>
 
 	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="pañoletaN" class="posicion-boton">
-		<button style="cursor: pointer; width: 100%;" class="botonaccion"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20quiero%20saber%20que%20pa%C3%B1oletas%20tiene%20para%20mi%20peludito" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por pañoletas</p></a></button>
-		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left"><a href="https://api.whatsapp.com/send?phone=573054025529&text=hola%20Camila,%20quiero%20una%20pa%C3%B1oleta%20personalizada%20para%20mi%20peludito?" target="__blank"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por pañoletas personalizadas</p></a></button>
+		<button style="cursor: pointer; width: 100%;" class="botonaccion" onclick="crearModal(1);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por pañoletas</p></button>
+		<button style="cursor: pointer; width: 100%; margin-top: 5%;" class="botonaccion left" onclick="crearModal(2);"><img src="../assets/img/whatsapp.svg"><p class="text-btn">Preguntar <br> por pañoletas personalizadas</p></button>
 	</div>
 
 	<div style="margin-top: -40%; margin-left: 5%; position: absolute; width: 15%;" id="sacosTutu" class="posicion-boton">
@@ -91,8 +91,88 @@
 	</div>
 </div>
 
+<div class="modal fade" id="modalpersonalizado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" style="width: 100%;" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLongTitle">TAYSU ACCESORIOS</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <h2>Elegir talla de tu peludito</h2>
+		  <div class="col-md-12 row">
+			<div class="col-md-6">
+				<img src="../assets/img/dog_and_cat_pattern-11.jpg" width="100%">
+			</div>
+			<div class="col-md-6">
+				<h1>TALLA</h1>
+				<form name="formul">
+					<select name="talla" id="talla">
+						<option value="" disabled selected>Elija la talla adecuada...</option>
+						<option value="1">Talla XS</option> 
+						<option value="2">Talla S</option> 
+						<option value="3">Talla M</option>
+						<option value="4">Talla L</option> 
+					 </select>
+				</form>
+				
+			</div>
+		  </div>
+		  
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-pañoleta" style="background-color: green;" onclick="getElement(cambioBoton);"><p class="text-white">ir a whatsapp</p></button>
+		  
+		</div>
+	  </div>
+	</div>
+  </div>
+
 
 <script type="text/javascript">
+var cambioBoton = 0;
+var select = document.getElementById('talla');
+var talla;
+var link1 = "https://api.whatsapp.com/send?phone=573054025529&"
+
+	select.addEventListener('change',
+  function(){
+    var selectedOption = this.options[select.selectedIndex];
+    talla = selectedOption.text;
+	
+  });
+
+function getElement(num) {
+
+	
+		if (num == 1) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20saber%20que%20pa%C3%B1oletas%20"+talla+"%20tiene%20para%20mi%20peludito?"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');
+
+    } else if (num == 2) {
+	
+	var link2 = "text=hola%20Camila,%20quiero%20una%20pa%C3%B1oleta%20personalizada%20"+talla+"%20para%20mi%20peludito"
+	var link3 = link1+link2;
+	window.open(link3, '_blank');}
+
+}
+
+function crearModal(num) {
+	$('#modalpersonalizado').modal("show");
+	
+	if (num == 1) {
+		cambioBoton = 1;
+		
+
+	} else if (num == 2) {
+		cambioBoton = 2;
+	}
+}
 
 function loadApp() {
 
