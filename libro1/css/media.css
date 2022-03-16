@@ -1,6 +1,6 @@
 @media only screen and (min-width: 945px) and (max-width: 1400px) {
     .posicion-boton {
-        margin-top: -18% !important;
+        margin-top: -15% !important;
     }
 
     .text-btn {
@@ -10,7 +10,7 @@
 
 @media only screen and (max-width: 940px) {
     .posicion-boton {
-        margin-top: -22% !important;
+        margin-top: -18% !important;
     }
 
     .text-btn {
@@ -20,7 +20,7 @@
 
 @media only screen and (max-width: 800px) {
     .posicion-boton {
-        margin-top: -25% !important;
+        margin-top: -20% !important;
     }
 
     .text-btn {
@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 680px) {
     .posicion-boton {
-        margin-top: -36% !important;
+        margin-top: -30% !important;
     }
 
     .text-btn {
@@ -40,7 +40,7 @@
 
 @media only screen and (max-width: 524px) {
     .posicion-boton {
-        margin-top: -60% !important;
+        margin-top: -55% !important;
     }
 
     .text-btn {
