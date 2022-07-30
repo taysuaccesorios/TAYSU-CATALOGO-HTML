@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    if (window.matchMedia("(max-width: 400px)").matches) {
+    if (window.matchMedia("(max-width: 500px)").matches) {
         
         $('.responsive-media').attr('src', 'libro1/celular.html');
         } else {
