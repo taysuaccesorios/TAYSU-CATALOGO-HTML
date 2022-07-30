@@ -1,13 +1,18 @@
-.animated{
-	-webkit-transition:margin-left 0.5s;
-	-moz-transition:margin-left 0.5s;
-	-ms-transition:margin-left 0.5s;
-	-o-transition:margin-left 0.5s;
-	transition:margin-left 0.5s;
-}
+
+.star {
+    animation:example infinite .4s
+   }
+   @keyframes example {
+       0% {background:  #FFDE59;}
+       100% {background:  white;}
+   }
 
 .bg-yellowTS {
 	background: #FFDE59;
+}
+
+.bg-white {
+	background: white !important;
 }
 
 .img-100 {
@@ -55,4 +60,36 @@
     border-top: solid 15px transparent;
     border-right: solid 15px black;
     border-bottom: solid 15px transparent;
+}
+
+.bottom{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+}
+
+.botonaccion {
+	background: #FFDE59;
+	border-radius: 50px;
+	border: none;
+    height: 40px;
+}
+
+a .text-btn {
+	text-decoration: none;
+	color: black;
+}
+
+a .text-btn :hover {
+	color: black;
+}
+
+.text-redes {
+	color: #FFDE59;
+	font-size: 15px;
+}
+
+.no-event {
+    pointer-events: none;
 }
